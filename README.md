@@ -1,9 +1,9 @@
 # RepoGrabberDataSet
 A compressed refactoring dataset file.
 
-RepoGrabberDataSet (RGDS) is a GZip compressed dataset containing all the information that the tool '[RepoGrabber](https://github.com/aiapo/RepoGrabber)' collects.
+RepoGrabberDataSet (RGDS) is a GZip compressed dataset containing all the information that the tool [RepoGrabber](https://github.com/aiapo/RepoGrabber) collects.
 
-'[RepoGrabberGrapher](https://github.com/aiapo/RepoGrabberGrapher)' takes input of a RGDS dataset to compute visualizations.
+[RepoGrabberGrapher](https://github.com/aiapo/RepoGrabberGrapher) takes input of a RGDS dataset to compute visualizations.
 
 As a reference, a dataset that totaled 4,437 distinct repositories with 18,402,387 refactorings total was ~15GB in the database, whereas when exported to RGDS it only was ~4.5GB with all data included.
 
@@ -18,21 +18,21 @@ It is prefered to use double quotation marks to contain data in order to not cau
 
 # Actions
 ### @RGDS_VERSION [version: str]
-The version number of the RGDS structure (currently 1.0.0)
+The version number of the RGDS structure (currently 1.0.0).
 Useful if the structure changes in the future
 
 ### @TITLE [title: str]
-The title of the dataset to help differentiate between different sets
+The title of the dataset to help differentiate between different sets.
 
 ### @RELATION [relationName: str]
-The relation's name
+The relation's name.
 
 ### @ATTRIBUTE [attributeName: str, attributeDataType: str]
-The relation's attributes, each attribute gets it's own @ATTRIBUTE
+The relation's attributes, each attribute gets it's own @ATTRIBUTE.
 
 ### @DATA
-Indicates that data follows to start data reading
-Each line of data should be on it's own line, and values in a row should be comma seperated
+Indicates that data follows to start data reading.
+Each line of data should be on it's own line, and values in a row should be comma seperated.
 
 # Example
 ```
@@ -59,5 +59,7 @@ Each line of data should be on it's own line, and values in a row should be comm
 "1","12345"
 ```
 
+You may also view and test a small 2.7MB dataset with actual data located in examples.
+
 # Thanks
-Design of the file inspired by '[Weka ARFF](https://waikato.github.io/weka-wiki/formats_and_processing/arff_stable/)'
+Design of the file inspired by [Weka ARFF](https://waikato.github.io/weka-wiki/formats_and_processing/arff_stable/)
