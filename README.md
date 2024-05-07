@@ -32,7 +32,7 @@ The relation's attributes, each attribute gets it's own @ATTRIBUTE.
 
 ### @DATA
 Indicates that data follows to start data reading.
-Each line of data should be on it's own line, and values in a row should be comma seperated.
+Each line of data should be on it's own line, and values in a row should be comma delimited.
 
 # Example
 ```
