@@ -7,6 +7,8 @@ RepoGrabberDataSet (RGDS) is a GZip compressed dataset containing all the inform
 
 As a reference, a dataset that totaled 4,437 distinct repositories with 18,402,387 refactorings total was ~15GB in the database, whereas when exported to RGDS it only was ~4.5GB with all data included.
 
+A **dataset.yaml** file located at the top-level directory is used to indicate what datasets may be imported, and where they are located in relation.
+
 # Design
 It contains information about the repositories, languages, and refactorings all in one file to be easily imported and shared.
 
@@ -59,7 +61,24 @@ Each line of data should be on it's own line, and values in a row should be comm
 "1","12345"
 ```
 
-You may also view and test a small 2.7MB dataset with actual data located in examples.
+You may also view and test a small 2.7MB dataset with actual data located in [examples](https://github.com/aiapo/RepoGrabberDataSet/blob/main/examples/example.rgds).
+
+# dataset.yaml
+This YAML file signifies where the datasets are located for easy imports. As an example by pointing a tool like RepoGrabberGrapher to a GitHub project, like this one, the tool will be able to find all the wanted to be imported datasets.
+
+The layout of this YAML file is as specifed:
+
+```
+---
+title: TITLE OF ALL DATASETS
+description: DESCRIPTION OF ALL DATASETS
+datasets:
+  - title: TITLE OF SPECIFIC DATASET
+    description: DESCRIPTION OF SPECIFIC DATASET
+    created: CREATION DATE OF SPECIFIC DATASET
+    location: LOCATION IN RELATION TO THE YAML FILE
+
+```
 
 # Thanks
 Design of the file inspired by [Weka ARFF](https://waikato.github.io/weka-wiki/formats_and_processing/arff_stable/)
