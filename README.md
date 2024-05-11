@@ -77,7 +77,6 @@ datasets:
     description: DESCRIPTION OF SPECIFIC DATASET
     created: CREATION DATE OF SPECIFIC DATASET
     location: LOCATION IN RELATION TO THE YAML FILE
-
 ```
 
 # Thanks
