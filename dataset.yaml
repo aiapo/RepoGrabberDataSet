@@ -2,7 +2,7 @@
 title: RGDS Samples
 description: These are some examples of what RGDS datasets can look like
 datasets:
-- title: Example 2MB Dataset
-  description: Small dataset for testing
-  created: '2024-05-06'
-  location: examples/example.rgds
+  - title: Example 2MB Dataset
+    description: Small dataset for testing
+    created: 2024-05-06
+    location: examples/example.rgds
