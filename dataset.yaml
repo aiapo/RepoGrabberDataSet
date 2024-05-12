@@ -6,4 +6,4 @@ datasets:
     description: Small dataset for testing
     created: 2024-05-06
     import: TRUE
-    location: examples/example.rgds
+    location: /examples/example.rgds
