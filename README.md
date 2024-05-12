@@ -19,20 +19,20 @@ Any line starting with '%' is a comment and is typically ignored in data reading
 It is prefered to use double quotation marks to contain data in order to not cause potential issues.
 
 # Actions
-### @RGDS_VERSION [version: str]
+### `@RGDS_VERSION` [version: str]
 The version number of the RGDS structure (currently 1.0.0).
 Useful if the structure changes in the future
 
-### @TITLE [title: str]
+### `@TITLE` [title: str]
 The title of the dataset to help differentiate between different sets.
 
-### @RELATION [relationName: str]
+### `@RELATION` [relationName: str]
 The relation's name.
 
-### @ATTRIBUTE [attributeName: str, attributeDataType: str]
+### `@ATTRIBUTE` [attributeName: str, attributeDataType: str]
 The relation's attributes, each attribute gets it's own @ATTRIBUTE.
 
-### @DATA
+### `@DATA`
 Indicates that data follows to start data reading.
 Each line of data should be on it's own line, and values in a row should be comma delimited.
 
@@ -63,8 +63,10 @@ Each line of data should be on it's own line, and values in a row should be comm
 
 You may also view and test a small 2.7MB dataset with actual data located in [examples](https://github.com/aiapo/RepoGrabberDataSet/blob/main/examples/example.rgds).
 
-# dataset.yaml
+# Multiple datasets and versions through `dataset.yaml`
 This YAML file signifies where the datasets are located for easy imports. As an example by pointing a tool like RepoGrabberGrapher to a GitHub project, like this one, the tool will be able to find all the wanted to be imported datasets.
+
+If using, this file must be put at the directory to be entered in at prompt. For example if the user wants to import this repositority's samples into RepoGrabberGrapher they will enter `https://github.com/aiapo/RepoGrabberDataSet` which will access `dataset.yaml` at the top directory to grab the RGDS files.
 
 The layout of this YAML file is as specifed:
 
@@ -76,6 +78,7 @@ datasets:
   - title: TITLE OF SPECIFIC DATASET
     description: DESCRIPTION OF SPECIFIC DATASET
     created: CREATION DATE OF SPECIFIC DATASET
+    import: (TRUE/FALSE) IF THE DATASET SHOULD BE IMPORTED
     location: LOCATION IN RELATION TO THE YAML FILE
 ```
 
